@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = "About";
 
 const identity = {
@@ -7,6 +9,9 @@ const identity = {
     occupation: "Developer",
     hobbies: ["Japanese", "Cycling", "Running"],
 };
+
+const hobbyColor = "#b3c7ff";
+const hobbyStyle = "italic";
 
 const showContent = true;
 ---
@@ -18,6 +23,17 @@ const showContent = true;
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
+        <style define:vars={{hobbyColor, hobbyStyle}}>
+            h1 {
+                color: purple;
+                font-size: 3rem;
+            }
+
+            .skill {
+                color: var(--hobbyColor);
+                font-style: var(--hobbyStyle);
+            }
+        </style>
     </head>
     <body>
         <a href="/">Home</a>
@@ -32,7 +48,7 @@ const showContent = true;
         {identity?.hobbies &&
             <h2>Hobbies</h2>
             <ul>
-                {identity.hobbies?.map((hobby) => <li>{hobby}</li>)}
+                {identity.hobbies?.map((hobby) => <li class="skill">{hobby}</li>)}
             </ul>
         }
         {showContent &&
