@@ -1,5 +1,14 @@
 ---
+const pageTitle = "About";
 
+const identity = {
+    firstName: "Jacob",
+    country: "United States",
+    occupation: "Developer",
+    hobbies: ["Japanese", "Cycling", "Running"],
+};
+
+const showContent = true;
 ---
 
 <html lang="en">
@@ -8,16 +17,26 @@
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>About my first Astro Site</title>
+        <title>{pageTitle}</title>
     </head>
     <body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
-        <h1>About my first Astro Site</h1>
+        <h1>{pageTitle}</h1>
         <p>
-            This site will update as I complete more of the tutorial, so keep
-            checking back and see how my journey is going!
+            Hello, my name is {identity?.firstName}. I am a {
+                identity?.occupation
+            } from the {identity?.country}.
         </p>
+        {identity?.hobbies &&
+            <h2>Hobbies</h2>
+            <ul>
+                {identity.hobbies?.map((hobby) => <li>{hobby}</li>)}
+            </ul>
+        }
+        {showContent &&
+            <p>This is conditionally handled text.</p>
+        }
     </body>
 </html>
