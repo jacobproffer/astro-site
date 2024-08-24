@@ -87,6 +87,14 @@
   dependencies:
     prismjs "^1.29.0"
 
+"@astrojs/rss@^4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@astrojs/rss/-/rss-4.0.7.tgz#af08243ed3c6e29448ecf2c2546f86cd5cf23f27"
+  integrity sha512-ZEG55XFB19l+DplUvBISmz04UbjDtKliRO4Y5+ERRhAMjgCVVobEBNE6ZwWG1h6orWUocy4nfPihKXDyB73x9g==
+  dependencies:
+    fast-xml-parser "^4.4.0"
+    kleur "^4.1.5"
+
 "@astrojs/telemetry@3.1.0":
   version "3.1.0"
   resolved "https://registry.npmjs.org/@astrojs/telemetry/-/telemetry-3.1.0.tgz"
@@ -1792,6 +1800,13 @@ fast-uri@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/fast-uri/-/fast-uri-3.0.1.tgz"
   integrity sha512-MWipKbbYiYI0UC7cl8m/i/IWTqfC8YXsqjzybjddLsFjStroQzsHXkc73JutMvBiXmOvapk+axIl79ig5t55Bw==
+
+fast-xml-parser@^4.4.0:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.4.1.tgz#86dbf3f18edf8739326447bcaac31b4ae7f6514f"
+  integrity sha512-xkjOecfnKGkSsOwtZ5Pz7Us/T6mrbPQrq0nh+aCO5V9nk5NLWmasAHumTKjiPJPWANe+kAZ84Jc8ooJkzZ88Sw==
+  dependencies:
+    strnum "^1.0.5"
 
 fastq@^1.6.0:
   version "1.17.1"
@@ -3529,6 +3544,11 @@ strip-json-comments@^3.1.1:
   version "3.1.1"
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
+
+strnum@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/strnum/-/strnum-1.0.5.tgz#5c4e829fe15ad4ff0d20c3db5ac97b73c9b072db"
+  integrity sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==
 
 suf-log@^2.5.3:
   version "2.5.3"
